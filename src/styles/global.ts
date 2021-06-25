@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   * {
@@ -7,8 +7,22 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: ${props => props.theme.colors.background};
-    color: ${props => props.theme.colors.text};
+    background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
     font: 400 16px 'DM sans', sans-serif;
   }
-`
+
+  
+  @media(max-width: 1080px){
+        html {
+            font-size: 80%; 
+        }
+    }
+
+    @media(max-width: 720px){
+        html {
+            font-size: 70%; 
+        }
+  }
+
+`;
