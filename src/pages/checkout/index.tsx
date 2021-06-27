@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-import { Container, Content, PlansDiv, Plan, FormDiv } from "./styles";
+import { 
+  Container, 
+  Content, 
+  PlansDiv, 
+  Plan, 
+  FormDiv,
+  AboutContainer, 
+  About, 
+  QuestionCircle 
+} from "./styles";
+
 import axios from "axios";
+import FormData from './components/Form/index';
 
 const Checkout: React.FC = () => {
   const [plans, setPlans] = useState([]);
@@ -23,9 +34,15 @@ const Checkout: React.FC = () => {
   return (
     <Container>
       <Content>
-      <FormDiv>2</FormDiv>
+      <FormDiv>
+        <h4>Estamos quase lá!</h4>
+        <p>Insira seus dados de pagamento abaixo:</p>
+        <FormData />
+
+      </FormDiv>
+
       <PlansDiv>
-        <h4>Confira seu Plano</h4>
+        <h4>Confira seu Plano:</h4>
         <p>fulano@cicrano.com.br</p>
         <div>
           {plans?.map((plan) => (
@@ -36,9 +53,14 @@ const Checkout: React.FC = () => {
               fullPrice={plan.fullPrice}
               discountAmmount={plan.discountAmmount}
               discountPercentage={plan.discountPercentage}
+              installments={plan.installments}
             />
           ))}
         </div>
+        <AboutContainer>
+          <About>Sobre a cobrança</About>
+          <QuestionCircle size={20} />
+        </AboutContainer>
       </PlansDiv>
       </Content>
     </Container>
