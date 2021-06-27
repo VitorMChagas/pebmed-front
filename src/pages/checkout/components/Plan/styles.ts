@@ -8,19 +8,19 @@ export const Container = styled.div`
   align-items: flex-start;
   width: 80%;
   height: 120px;
-  border: 1px solid ${(props) => props.theme.colors.primary};
+  border: 1.5px solid ${(props) => props.theme.colors.primary};
   border-radius: 16px;
   padding: 18px;
   transition: border 0.2s;
 
   &:hover {
-    border: 1px solid blue;
+    border: 1.5px solid ${(props) => props.theme.colors.secondary};
   }
 
   > p {
     font-size: 10px;
     margin-top: 10px;
-    color: red;
+    color: ${(props) => props.theme.colors.secondary};
   }
 `;
 
@@ -31,6 +31,7 @@ export const Title = styled.span`
 `;
 
 export const Price = styled.span`
+  flex-wrap: nowrap;
   margin: 100px 0 50px;
   font-size: 14px;
   color: ${(props) => props.theme.colors.primary};
@@ -38,7 +39,7 @@ export const Price = styled.span`
 
 export const Discount = styled.span`
   border-radius: 12px;
-  background: #F5850B;
+  background: ${(props) => props.theme.colors.secondary};
   color: ${(props) => props.theme.colors.background};
   font-size: .8rem;
   padding: 3px 10px;
