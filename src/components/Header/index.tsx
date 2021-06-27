@@ -1,15 +1,13 @@
 import React from 'react';
 
-import { Container, LeftArrow } from './styles';
+import { Container, LeftArrow, Empty } from './styles';
 
 
 const Header: React.FC = () => {
   return <Container>
     <LeftArrow size={40} />
     <img src="/logo.png" alt=""/>
-    <div>
-      {' '}
-    </div>
+    <Empty>PEBMED</Empty>
   </Container>;
 }
 

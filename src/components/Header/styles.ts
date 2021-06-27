@@ -12,10 +12,13 @@ width: 100vw;
 padding: 40px;
 
   > img {
-    width: 60px;
-    height: 40px;
+    width: 55px;
+    height: 35px;
   }
   
 `;
 
 export const LeftArrow = styled(FiChevronLeft)``;
+export const Empty = styled.div`
+  visibility: hidden;
+`;
