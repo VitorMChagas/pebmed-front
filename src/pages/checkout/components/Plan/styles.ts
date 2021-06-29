@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 80%;
+  width: 22rem;
   height: 120px;
   border: 1.5px solid ${(props) => props.theme.colors.primary};
   border-radius: 16px;
