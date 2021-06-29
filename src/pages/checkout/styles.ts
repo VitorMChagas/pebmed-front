@@ -18,6 +18,12 @@ export const Content = styled.div`
   grid-gap: 50px;
   height: 100%;
   width: 70vw;
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+  }
 `;
 
 export const FormDiv = styled.div`
@@ -33,7 +39,8 @@ export const FormDiv = styled.div`
   }
 
   > div {
-    margin-top: 50px;
+    display: flex;
+    margin-top: -10px;
   }
 `;
 

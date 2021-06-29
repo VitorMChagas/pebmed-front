@@ -37,6 +37,7 @@ const Checkout: React.FC = () => {
       <FormDiv>
         <h4>Estamos quase lá!</h4>
         <p>Insira seus dados de pagamento abaixo:</p>
+        
         <FormData />
 
       </FormDiv>
