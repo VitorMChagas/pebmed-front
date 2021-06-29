@@ -35,7 +35,7 @@ export const InfoBox = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 25rem;
-  margin-top: 10%;
+  margin-top: 5%;
 
   border-radius: 15px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -123,6 +123,7 @@ export const ManagePlanBtn = styled.button`
 `;
 
 export const HomeBtn = styled.button`
+  font-size: 0.9rem;
   font-weight: 600;
   color: #fff;
   cursor: pointer;

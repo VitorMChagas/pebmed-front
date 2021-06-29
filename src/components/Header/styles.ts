@@ -18,7 +18,19 @@ padding: 40px;
   
 `;
 
-export const LeftArrow = styled(FiChevronLeft)``;
+export const LeftArrow = styled(FiChevronLeft)`
+  cursor: pointer;
+
+  &:hover {
+    color: #26246D;
+    outline: none;
+  }
+
+  &:active {
+    color: ${(props) => props.theme.colors.secondary};
+  }
+`;
+
 export const Empty = styled.div`
   visibility: hidden;
 `;

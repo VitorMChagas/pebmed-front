@@ -6,7 +6,8 @@ const theme = {
     secondary: '#F5850B',
     gray: '#F4F3F6',
     grayDetail: '#E1DEE8',
-    grayText: '#C9C5D4'
+    grayText: '#C9C5D4',
+    formText: '#DDD9E5'
   }
 }
 
