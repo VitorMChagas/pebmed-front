@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   margin-top: 70px;
+  margin-left: 17rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
@@ -20,9 +21,18 @@ export const Content = styled.div`
   width: 70vw;
 
   @media only screen and (max-width: 768px) {
+    margin-left: 0;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap; 
+
+      div:nth-child(1) { 
+        order: 2; 
+      }
+
+      div:nth-child(2) { 
+        order: 1;
+      }
   }
 `;
 
