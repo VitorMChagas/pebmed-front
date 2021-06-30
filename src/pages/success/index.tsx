@@ -12,7 +12,7 @@ import {
   UserBox,
   ManagePlanBtn,
   HomeBtn,
-} from './styles';
+} from '../../components/Success/styles';
 
 interface SubscriptionProps {
   creditCardCPF?: string;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { AiOutlineQuestionCircle } from 'react-icons/ai';
-import AppPlan from '../../components/Plan';
+import AppPlan from '../Plan';
 
 export const Container = styled.div`
   width: 100vw;

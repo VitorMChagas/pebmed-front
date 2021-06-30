@@ -9,7 +9,7 @@ import {
   AboutContainer,
   About,
   QuestionCircle,
-} from './styles';
+} from '../../components/Checkout/styles';
 
 import FormData from '../../components/Form/index';
 import { OfferService } from '../../services/offer';
