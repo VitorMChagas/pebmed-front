@@ -21,10 +21,9 @@
   },
   "plugins": [
     "react",
-    "@typescript-eslint",
+    "@typescript-eslint"
   ],
   "rules": {
-    "prettier/prettier": "error",
     "space-before-function-paren": "off",
     "react/prop-types": "off"
   }
