@@ -1,66 +1,77 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { SubmitHandler, FormHandles } from '@unform/core'
 import * as Yup from 'yup'
 
 import { useRouter } from 'next/router'
 
-import Button from '../../../../components/Button'
-
-import { Container, Form, Group, Select, SelectIcon } from './styles'
+import { Container, Form, Group, Select, SelectIcon, MainButton } from './styles'
 import InputMask from '../../../../components/Input'
+import { CheckoutValidation } from '../../../../helpers/validation'
+import { SubscriptionPostService } from './../../../../services/subscribe';
 
 interface FormProps {
   data: {
-    couponCode: null
-    creditCardCPF: number //"98765432100",
-    creditCardCVV: number //"123",
-    creditCardExpirationDate: string //"10/21",
-    creditCardHolder: string //"Cássio Scofield",
     creditCardNumber: number //5555444433332222,
-    gateway: string //"iugu",
+    creditCardExpirationDate: string //"10/21",
+    creditCardCVV: number //"123",
+    creditCardHolder: string //"Cássio Scofield",
+    creditCardCPF: number //"98765432100",
+    couponCode: null
     installments: number //1,
+    gateway: string //"iugu",
     offerId: number //18,
     userId: number //1
   }
 }
 
-export default function FormData() {
+export default function FormData({isChecked, splittedPrice, installments, formatToCurrency, discountPrice }) {
   const formRef = useRef<FormHandles>(null)
   const router = useRouter()
 
-  const handleSubmit: SubmitHandler<FormProps> = ({ data, ...rest }) => {
+  const [formData, setFormData] = useState([])
+
+  const handleSubmit: SubmitHandler<FormProps> = async (data) => {
+
     try {
-      // const schema = Yup.object().shape({
-      //   name: Yup.string().required('O nome é obrigatório'),
-      //   email: Yup.string()
-      //     .email('Digite um e-mail válido')
-      //     .required('O e-mail é obrigatório'),
-      //   address: Yup.object().shape({
-      //     city: Yup.string()
-      //       .min(3, 'No mínimo 3 carateres')
-      //       .required('A cidade é obrigatória')
-      //   })
-      // });
+      const schema = CheckoutValidation(data);
 
-      // schema.validate(data, {
-      //   abortEarly: false,
-      // })
+      await schema.validate(data, {
+        abortEarly: false
+      })
 
-      router.push('/success')
+      router.push({
+        pathname: '/success',
+        query: { cpf: formRef.current.getData().creditCardCPF }, 
+      }, null)
 
       formRef.current.setErrors({})
-    } catch (err) {
-      if (err instanceof Yup.ValidationError) {
-        const errorMessages = {}
 
+    } catch (err) {
+
+      if (err instanceof Yup.ValidationError) {
+        
+        const errorMessages = {}
+        
         err.inner.forEach(error => {
           errorMessages[error.path] = error.message
         })
-
+        
         formRef.current.setErrors(errorMessages)
+        return
       }
     }
   }
+
+  useEffect(() => {
+    async function postData() {
+      const response = await SubscriptionPostService.list()
+      console.log(response)
+
+      setFormData(response.data)
+    }
+
+    postData()
+  }, [])
 
   return (
     <Container>
@@ -73,7 +84,7 @@ export default function FormData() {
           <label>
             Número do cartão
             <InputMask
-              name="creditCardHolder"
+             name="creditCardNumber"
               mask="9999 9999 9999 9999"
               maskPlaceholder="0000 0000 0000 0000"
             />
@@ -101,8 +112,9 @@ export default function FormData() {
           <label>
             Nome impresso no cartão
             <InputMask
+             name="creditCardHolder"
               alwaysShowMask
-              name="creditCardName"
+              
               mask=""
               placeholder="Seu nome"
             />
@@ -117,23 +129,21 @@ export default function FormData() {
           </label>
           <label>
             Cupom
-            <InputMask 
-              name="couponCode" 
-              mask="" 
-              placeholder="Insira aqui" 
-            />
+            <InputMask name="couponCode" mask="" placeholder="Insira aqui" />
           </label>
           <label>
             Número de parcelas
-            <SelectIcon size={22}/>
-            <Select >
+            <SelectIcon size={22} />
+            <Select>
               <option value="">Selecionar</option>
               <option value="installments">1</option>
-            </ Select>
+              {isChecked && <option value="">{`${installments}x`} de {`${formatToCurrency(splittedPrice(installments, discountPrice))}`}</option>}
+            </Select>
           </label>
+            <MainButton type="submit">Finalizar pagamento</MainButton>
         </Form>
       </Group>
-      <Button text="Finalizar pagamento" onClick={() => handleSubmit}></Button>
     </Container>
   )
 }
+

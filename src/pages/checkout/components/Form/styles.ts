@@ -19,7 +19,6 @@ export const Container = styled.div`
     width: 62%;
     margin-left: 3.8rem;
     margin-bottom: 10px;
-    margin-top: 10px;
   }
 
   > div img:last-child {
@@ -43,6 +42,7 @@ export const Form = styled(Unform)`
 
     > label {
       font-size: 1rem;
+
     }
   }
 
@@ -84,7 +84,7 @@ export const Form = styled(Unform)`
 export const SelectIcon = styled(BiChevronDown)`
   display: flex;
   position: absolute;
-  margin: 0.8rem 20.8rem;
+  margin: 0.8rem 26rem;
   color: #666173;
   cursor: default;
   pointer-events: none;
@@ -101,4 +101,30 @@ export const Select = styled.select`
     margin-bottom: 20px;
     color: ${(props) => props.theme.colors.formText};
 
+`;
+
+export const MainButton = styled.button`
+  
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  width: 25rem;
+  height: 60px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  background-color: ${(props) => props.theme.colors.primary};
+
+  transition: 0.1s ease-out;
+
+  &:hover {
+    background-color: #26246D;
+    outline: none;
+  }
+
+  &:active {
+    background-color: ${(props) => props.theme.colors.secondary};
+  }
 `;
