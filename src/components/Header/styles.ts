@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { FiChevronLeft } from "react-icons/fi";
+import styled from 'styled-components';
+import { FiChevronLeft } from 'react-icons/fi';
 
 export const Container = styled.div`
   display: flex;
@@ -26,7 +26,7 @@ export const LeftArrow = styled(FiChevronLeft)`
   }
 
   &:active {
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.secondary};
   }
 `;
 

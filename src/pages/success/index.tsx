@@ -1,6 +1,6 @@
-import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
-import { SubscriptionGetService } from "../../services/subscribe";
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import { SubscriptionGetService } from '../../services/subscribe';
 
 import {
   Container,
@@ -12,7 +12,7 @@ import {
   UserBox,
   ManagePlanBtn,
   HomeBtn,
-} from "./styles";
+} from './styles';
 
 interface SubscriptionProps {
   creditCardCPF?: string;

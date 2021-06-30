@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { IoCheckmark } from "react-icons/io5";
-import { TiStarOutline } from "react-icons/ti";
+import styled from 'styled-components';
+import { IoCheckmark } from 'react-icons/io5';
+import { TiStarOutline } from 'react-icons/ti';
 
 export const Container = styled.div`
   display: flex;
@@ -11,13 +11,13 @@ export const Container = styled.div`
   > h2 {
     padding: 18px;
     font-size: 1.8rem;
-    color: ${(props) => props.theme.colors.primary};
+    color: ${props => props.theme.colors.primary};
   }
 
   > p {
     font-size: 1.2rem;
     text-align: center;
-    color: ${(props) => props.theme.colors.grayText};
+    color: ${props => props.theme.colors.grayText};
   }
 
   @media only screen and (max-width: 768px) {
@@ -29,11 +29,11 @@ export const Container = styled.div`
 `;
 
 export const CheckMark = styled(IoCheckmark)`
-  border: 2px solid ${(props) => props.theme.colors.gray};
+  border: 2px solid ${props => props.theme.colors.gray};
   border-radius: 50px;
   padding: 10px;
   display: flex;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${props => props.theme.colors.primary};
   margin-top: 5%;
 `;
 
@@ -57,16 +57,16 @@ export const CheckoutBox = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  background-color: ${(props) => props.theme.colors.gray};
+  background-color: ${props => props.theme.colors.gray};
   border-radius: 15px;
   padding: 15px;
 `;
 
 export const Star = styled(TiStarOutline)`
-  background-color: ${(props) => props.theme.colors.grayDetail};
+  background-color: ${props => props.theme.colors.grayDetail};
   padding: 13px;
   border-radius: 50%;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${props => props.theme.colors.primary};
 
   &:hover {
     color: #26246d;
@@ -82,7 +82,7 @@ export const PlanBox = styled.div`
   font-size: 1rem;
   font-weight: 600;
 
-  color: ${(props) => props.theme.colors.primary};
+  color: ${props => props.theme.colors.primary};
   text-align: end;
 `;
 
@@ -100,12 +100,12 @@ export const UserBox = styled.div`
 
     font-size: 1rem;
 
-    color: ${(props) => props.theme.colors.text};
+    color: ${props => props.theme.colors.text};
 
     > span {
       font-size: 1rem;
 
-      color: ${(props) => props.theme.colors.grayText};
+      color: ${props => props.theme.colors.grayText};
     }
   }
 `;
@@ -119,7 +119,7 @@ export const ManagePlanBtn = styled.button`
   border: none;
 
   background-color: #fff;
-  color: ${(props) => props.theme.colors.primary};
+  color: ${props => props.theme.colors.primary};
   transition: 0.1s ease-out;
 
   &:hover {
@@ -128,7 +128,7 @@ export const ManagePlanBtn = styled.button`
   }
 
   &:active {
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.secondary};
   }
 `;
 
@@ -143,7 +143,7 @@ export const HomeBtn = styled.button`
   text-align: center;
   border: none;
   border-radius: 50px;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.primary};
 
   transition: 0.1s ease-out;
 
@@ -153,6 +153,6 @@ export const HomeBtn = styled.button`
   }
 
   &:active {
-    background-color: ${(props) => props.theme.colors.secondary};
+    background-color: ${props => props.theme.colors.secondary};
   }
 `;

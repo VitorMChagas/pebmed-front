@@ -1,7 +1,6 @@
-import styled from "styled-components";
-import AppPlan from "./components/Plan";
-
-import { AiOutlineQuestionCircle } from "react-icons/ai";
+import styled from 'styled-components';
+import { AiOutlineQuestionCircle } from 'react-icons/ai';
+import AppPlan from './components/Plan';
 
 export const Container = styled.div`
   width: 100vw;
@@ -104,6 +103,6 @@ export const About = styled.span`
 
 export const QuestionCircle = styled(AiOutlineQuestionCircle)`
   &:hover {
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.secondary};
   }
 `;

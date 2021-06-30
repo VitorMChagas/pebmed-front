@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { Form as Unform } from "@unform/web";
+import styled from 'styled-components';
+import { Form as Unform } from '@unform/web';
 
-import { BiChevronDown } from "react-icons/bi";
+import { BiChevronDown } from 'react-icons/bi';
 
 export const Container = styled.div`
   display: flex;
@@ -59,10 +59,10 @@ export const Form = styled(Unform)`
     border: none;
     border-bottom: 2px solid #e7e7e7;
     margin-bottom: 20px;
-    color: ${(props) => props.theme.colors.formText};
+    color: ${props => props.theme.colors.formText};
 
     ::placeholder {
-      color: ${(props) => props.theme.colors.formText};
+      color: ${props => props.theme.colors.formText};
     }
   }
 
@@ -75,7 +75,7 @@ export const Form = styled(Unform)`
     border: none;
     border-bottom: 2px solid #e7e7e7;
     margin-bottom: 20px;
-    color: ${(props) => props.theme.colors.formText};
+    color: ${props => props.theme.colors.formText};
   }
 `;
 
@@ -97,7 +97,7 @@ export const Select = styled.select`
   border: none;
   border-bottom: 2px solid #e7e7e7;
   margin-bottom: 20px;
-  color: ${(props) => props.theme.colors.formText};
+  color: ${props => props.theme.colors.formText};
 `;
 
 export const MainButton = styled.button`
@@ -111,7 +111,7 @@ export const MainButton = styled.button`
   text-align: center;
   border: none;
   border-radius: 50px;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.primary};
 
   transition: 0.1s ease-out;
 
@@ -121,6 +121,6 @@ export const MainButton = styled.button`
   }
 
   &:active {
-    background-color: ${(props) => props.theme.colors.secondary};
+    background-color: ${props => props.theme.colors.secondary};
   }
 `;

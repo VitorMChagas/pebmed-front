@@ -1,14 +1,8 @@
 {
   "compilerOptions": {
-    "typeRoots": [
-      "node_modules/@types",
-    ],
+    "typeRoots": ["node_modules/@types"],
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -23,11 +17,13 @@
   },
   "include": [
     "next-env.d.ts",
+    "src/styles/styled.d.ts",
     "**/*.ts",
-    "**/*.tsx",   
-    "src/pages/success/index.tsx"  
+    "**/*.tsx",
+    "src/pages/success/index.tsx",
+    "src/test/pages/index.test.jsx"
   ],
   "exclude": [
-    "node_modules"
-  ],
+    "node_modules",
+  ]
 }

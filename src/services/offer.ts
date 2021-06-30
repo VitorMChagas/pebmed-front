@@ -1,5 +1,7 @@
-import { api } from "./api";
+import api from './api';
 
 export const OfferService = {
-  list: () => api.get("/offer"),
+  list: () => api.get('/offer'),
 };
+
+export default api;

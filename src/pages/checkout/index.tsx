@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
 import {
   Container,
@@ -9,27 +9,27 @@ import {
   AboutContainer,
   About,
   QuestionCircle,
-} from "./styles";
+} from './styles';
 
-import FormData from "./components/Form/index";
-import { OfferService } from "../../services/offer";
+import FormData from './components/Form/index';
+import { OfferService } from '../../services/offer';
 
 const Checkout: React.FC = () => {
   const [plans, setPlans] = useState([]);
   const [isChecked, setIsChecked] = useState(false);
 
   function formatToCurrency(amount: number) {
-    return "R$" + amount.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
+    return `R$${amount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
   }
 
   function discountedPrice(fullPrice: number, discountAmmount: number) {
-    var finalPrice = fullPrice - discountAmmount;
+    const finalPrice = fullPrice - discountAmmount;
 
     return finalPrice;
   }
 
   function splittedPrice(installments: number, discountedPrice: number) {
-    var finalSplittedPrice = discountedPrice / installments;
+    const finalSplittedPrice = discountedPrice / installments;
 
     return finalSplittedPrice;
   }
@@ -68,7 +68,7 @@ const Checkout: React.FC = () => {
           <h4>Confira seu Plano:</h4>
           <p>fulano@cicrano.com.br</p>
           <div>
-            {plans?.map((plan) => (
+            {plans?.map(plan => (
               <Plan
                 key={plan.id}
                 formatToCurrency={formatToCurrency}

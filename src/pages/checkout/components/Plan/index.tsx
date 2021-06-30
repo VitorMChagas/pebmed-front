@@ -1,24 +1,24 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback } from 'react';
 
-import { Container, Title, Discount, Price, Group } from "./styles";
+import { Container, Title, Discount, Price, Group } from './styles';
 
 interface PlanProps {
-  storeId?: string; //anual_parcelado_iugu,
-  title?: string; //Premium Anual,
-  description?: string; //Parcelado,
-  caption?: string; //7 Dias Grátis,
-  fullPrice?: number; //600,
-  discountAmmount?: number; //60
-  discountPercentage?: number; //0.1,
-  periodLabel?: string; //mês,
-  period?: string; //annually,
+  storeId?: string; // anual_parcelado_iugu,
+  title?: string; // Premium Anual,
+  description?: string; // Parcelado,
+  caption?: string; // 7 Dias Grátis,
+  fullPrice?: number; // 600,
+  discountAmmount?: number; // 60
+  discountPercentage?: number; // 0.1,
+  periodLabel?: string; // mês,
+  period?: string; // annually,
   discountCouponCode?: null;
-  order?: number; //1,
-  priority?: number; //1,
-  gateway?: string; //iugu,
-  splittable?: boolean; //true,
-  installments?: number; //12,
-  acceptsCoupon?: boolean; //true
+  order?: number; // 1,
+  priority?: number; // 1,
+  gateway?: string; // iugu,
+  splittable?: boolean; // true,
+  installments?: number; // 12,
+  acceptsCoupon?: boolean; // true
   finalPrice?: number;
   isChecked?: boolean;
   onChange?: () => void;
@@ -45,7 +45,7 @@ const Plan: React.FC<PlanProps> = ({
   ...rest
 }) => {
   const [discountPrice, setDiscountPrice] = useState<number>(
-    discountedPrice(fullPrice, discountAmmount)
+    discountedPrice(fullPrice, discountAmmount),
   );
 
   return (
@@ -54,9 +54,9 @@ const Plan: React.FC<PlanProps> = ({
       <Group>
         <div>
           <Price>
-            De{" "}
-            {`${formatToCurrency(fullPrice)} | 
-              Por 
+            De{' '}
+            {`${formatToCurrency(fullPrice)} |
+              Por
               ${formatToCurrency(discountPrice)}`}
           </Price>
           <Discount>{`-${Math.round(discountPercentage * 100)}%`}</Discount>
@@ -68,10 +68,10 @@ const Plan: React.FC<PlanProps> = ({
         />
       </Group>
       {installments === 1 ? (
-        <p> {""} </p>
+        <p> </p>
       ) : (
         <p>
-          {`${installments}x`} de{" "}
+          {`${installments}x`} de{' '}
           {`${formatToCurrency(splittedPrice(installments, discountPrice))}`}
           /mes
         </p>

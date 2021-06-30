@@ -1,7 +1,7 @@
-import { useRouter } from "next/router";
-import React from "react";
+import { useRouter } from 'next/router';
+import React from 'react';
 
-import { Container, LeftArrow, Empty } from "./styles";
+import { Container, LeftArrow, Empty } from './styles';
 
 const Header: React.FC = () => {
   const router = useRouter();
