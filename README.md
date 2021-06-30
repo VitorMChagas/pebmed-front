@@ -15,7 +15,7 @@
 ### 🏠 [Homepage](https://github.com/VitorMChagas/pebmed-front#readme)
 
 ### ✨ [Demo](https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout)
-https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout(https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout)
+https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout
 ## Install
 
 ```sh
