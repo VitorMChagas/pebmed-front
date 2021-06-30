@@ -11,7 +11,7 @@ import {
   QuestionCircle,
 } from './styles';
 
-import FormData from './components/Form/index';
+import FormData from '../../components/Form/index';
 import { OfferService } from '../../services/offer';
 
 const Checkout: React.FC = () => {

@@ -13,9 +13,9 @@ import {
   SelectIcon,
   MainButton,
 } from './styles';
-import InputMask from '../../../../components/Input';
-import CheckoutValidation from '../../../../helpers/validation';
-import { SubscriptionPostService } from '../../../../services/subscribe';
+import InputMask from '../Input/index';
+import CheckoutValidation from '../../helpers/validation';
+import { SubscriptionPostService } from '../../services/subscribe';
 
 interface FormProps {
   data: {
