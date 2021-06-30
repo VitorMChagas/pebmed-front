@@ -1,9 +1,9 @@
 import { api } from "./api";
 
 export const SubscriptionPostService = {
-  list: () => api.post('/subscription')
-}
+  list: () => api.post("/subscription"),
+};
 
 export const SubscriptionGetService = {
-  list: () => api.get('/subscription')
-}
+  list: () => api.get("/subscription"),
+};

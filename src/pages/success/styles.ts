@@ -24,7 +24,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
   }
 `;
 
@@ -69,11 +69,11 @@ export const Star = styled(TiStarOutline)`
   color: ${(props) => props.theme.colors.primary};
 
   &:hover {
-    color: #26246D;
+    color: #26246d;
     outline: none;
   }
 
-  &:active{
+  &:active {
     color: yellow;
   }
 `;
@@ -123,11 +123,11 @@ export const ManagePlanBtn = styled.button`
   transition: 0.1s ease-out;
 
   &:hover {
-    color: #26246D;
+    color: #26246d;
     outline: none;
   }
 
-  &:active{
+  &:active {
     color: ${(props) => props.theme.colors.secondary};
   }
 `;
@@ -148,11 +148,11 @@ export const HomeBtn = styled.button`
   transition: 0.1s ease-out;
 
   &:hover {
-    background-color: #26246D;
+    background-color: #26246d;
     outline: none;
   }
 
-  &:active{
+  &:active {
     background-color: ${(props) => props.theme.colors.secondary};
   }
 `;

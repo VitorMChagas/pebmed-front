@@ -24,15 +24,15 @@ export const Content = styled.div`
     margin-left: 0;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 
-      div:nth-child(1) { 
-        order: 2; 
-      }
+    div:nth-child(1) {
+      order: 2;
+    }
 
-      div:nth-child(2) { 
-        order: 1;
-      }
+    div:nth-child(2) {
+      order: 1;
+    }
   }
 `;
 

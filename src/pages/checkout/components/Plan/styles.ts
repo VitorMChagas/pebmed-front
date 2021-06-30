@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
@@ -40,7 +40,7 @@ export const Discount = styled.span`
   border-radius: 12px;
   background: ${(props) => props.theme.colors.secondary};
   color: ${(props) => props.theme.colors.background};
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 3px 10px;
   margin-left: 10px;
 `;
@@ -53,7 +53,6 @@ export const Group = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-
 
   > input {
     width: 22px;

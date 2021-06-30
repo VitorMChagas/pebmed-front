@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Form as Unform } from '@unform/web'
+import styled from "styled-components";
+import { Form as Unform } from "@unform/web";
 
 import { BiChevronDown } from "react-icons/bi";
 
@@ -25,11 +25,11 @@ export const Container = styled.div`
     width: 40%;
     margin-left: 6.5rem;
   }
-`
+`;
 
 export const Group = styled.div`
   margin-top: 20px;
-`
+`;
 
 export const Form = styled(Unform)`
   > div {
@@ -42,7 +42,6 @@ export const Form = styled(Unform)`
 
     > label {
       font-size: 1rem;
-
     }
   }
 
@@ -50,7 +49,6 @@ export const Form = styled(Unform)`
     color: #666173;
     margin-bottom: 10px;
     font-size: 1rem;
-
   }
 
   .inputClass {
@@ -64,7 +62,7 @@ export const Form = styled(Unform)`
     color: ${(props) => props.theme.colors.formText};
 
     ::placeholder {
-      color: ${(props) => props.theme.colors.formText}
+      color: ${(props) => props.theme.colors.formText};
     }
   }
 
@@ -79,7 +77,7 @@ export const Form = styled(Unform)`
     margin-bottom: 20px;
     color: ${(props) => props.theme.colors.formText};
   }
-`
+`;
 
 export const SelectIcon = styled(BiChevronDown)`
   display: flex;
@@ -91,20 +89,18 @@ export const SelectIcon = styled(BiChevronDown)`
 `;
 
 export const Select = styled.select`
-    appearance: none;
-    width: 100%;
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: flex;
-    border: none;
-    border-bottom: 2px solid #e7e7e7;
-    margin-bottom: 20px;
-    color: ${(props) => props.theme.colors.formText};
-
+  appearance: none;
+  width: 100%;
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: flex;
+  border: none;
+  border-bottom: 2px solid #e7e7e7;
+  margin-bottom: 20px;
+  color: ${(props) => props.theme.colors.formText};
 `;
 
 export const MainButton = styled.button`
-  
   font-size: 0.9rem;
   font-weight: 600;
   color: #fff;
@@ -120,7 +116,7 @@ export const MainButton = styled.button`
   transition: 0.1s ease-out;
 
   &:hover {
-    background-color: #26246D;
+    background-color: #26246d;
     outline: none;
   }
 

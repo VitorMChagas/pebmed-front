@@ -49,7 +49,12 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="icon" type="image/png" sizes="72x72" href="https://pebmed.com.br/wp-content/themes/Pebmed-Theme/sahifa/static/icons/icon-72x72.png" />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="72x72"
+            href="https://pebmed.com.br/wp-content/themes/Pebmed-Theme/sahifa/static/icons/icon-72x72.png"
+          />
         </Head>
         <body>
           <Main />

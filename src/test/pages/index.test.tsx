@@ -1,8 +1,8 @@
-import React from 'react'
-import { render, fireEvent } from '../testUtils'
-import  Checkout from '../../pages/checkout/index'
+import React from "react";
+import { render, fireEvent } from "../testUtils";
+import Checkout from "../../pages/checkout/index";
 
-describe('Checkout Page', () => {
+describe("Checkout Page", () => {
   // it('matches snapshot', () => {
   //   const { asFragment } = render(<Checkout />, {})
   //   expect(asFragment()).toMatchSnapshot()
@@ -15,8 +15,8 @@ describe('Checkout Page', () => {
   //   expect(window.alert).toHaveBeenCalledWith('With typescript and Jest')
   // })
 
-it('should render Header', () => {
-  const { getByText } = render(<Checkout />);
-  expect(getByText('Estamos quase lá!')).toBeInTheDocument();
+  it("should render Header", () => {
+    const { getByText } = render(<Checkout />);
+    expect(getByText("Estamos quase lá!")).toBeInTheDocument();
+  });
 });
-})
