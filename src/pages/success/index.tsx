@@ -1,4 +1,6 @@
-import React from 'react';
+import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import { SubscriptionGetService } from '../../services/subscribe';
 
 import { 
   Container, 
@@ -12,7 +14,30 @@ import {
   HomeBtn
 } from './styles';
 
-const Success: React.FC = () => {
+interface SubscriptionProps {
+  creditCardCPF?: string;
+}
+
+const Success: React.FC = ({
+}) => {
+
+  const router = useRouter();
+  const [cpfData, setCpfData] = useState(router.query.cpf);
+  console.log(cpfData);
+
+  const [subscription, setSubscription] = useState<SubscriptionProps>()
+
+  useEffect(() => {
+    async function requestData() {
+      const response = await SubscriptionGetService.list()
+      console.log(response)
+      setSubscription(response.data)
+    }
+
+    requestData()
+  }, [])
+
+
   return (
     <Container>
         <CheckMark size={70}/>
@@ -36,7 +61,7 @@ const Success: React.FC = () => {
               </div>
               <div>
                 <span>CPF</span>
-                000.000.000-00
+               {subscription?.creditCardCPF}
               </div>
             </section>
           </UserBox>
