@@ -1,71 +1,100 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react'
 
-import { 
-  Container, 
-  Content, 
-  PlansDiv, 
-  Plan, 
+import {
+  Container,
+  Content,
+  PlansDiv,
+  Plan,
   FormDiv,
-  AboutContainer, 
-  About, 
-  QuestionCircle 
-} from "./styles";
+  AboutContainer,
+  About,
+  QuestionCircle
+} from './styles'
 
-import axios from "axios";
-import FormData from './components/Form/index';
+import FormData from './components/Form/index'
+import { OfferService } from '../../services/offer'
 
 const Checkout: React.FC = () => {
-  const [plans, setPlans] = useState([]);
+  const [plans, setPlans] = useState([])
+  const [isChecked, setIsChecked] = useState(false)
 
+  function formatToCurrency(amount: number) {
+    return "R$" + amount.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
+  }
+  
+  function discountedPrice(fullPrice: number, discountAmmount: number) {
+    var finalPrice = fullPrice - discountAmmount;
+
+    return finalPrice;
+  }
+  
+  function splittedPrice(installments: number, discountedPrice: number) {
+      var finalSplittedPrice = discountedPrice / installments;
+      
+      return finalSplittedPrice;
+  }
+  
   useEffect(() => {
     async function requestData() {
-      const response = await axios.get(
-        "https://private-0ced4-pebmeddesafiofrontend.apiary-mock.com/offer"
-      );
-      console.log(response);
-      setPlans(response.data);
+      const response = await OfferService.list()
+      console.log(response.data)
+      setPlans(response.data)
     }
 
-    requestData();
-  }, []);
+    requestData()
+  }, [])
 
-  console.log(plans);
+ function handleChange(value:boolean): void{  
+   setIsChecked(value)
+ }
 
   return (
     <Container>
       <Content>
-      <FormDiv>
-        <h4>Estamos quase lá!</h4>
-        <p>Insira seus dados de pagamento abaixo:</p>
-        
-        <FormData />
+        <FormDiv>
+          <h4>Estamos quase lá!</h4>
+          <p>Insira seus dados de pagamento abaixo:</p>
 
-      </FormDiv>
+          <FormData
+            isChecked={isChecked}
+            splittedPrice={splittedPrice}
+            discountPrice={discountedPrice}
+            formatToCurrency={formatToCurrency}
+            installments={12}
+          />
+        </FormDiv>
 
-      <PlansDiv>
-        <h4>Confira seu Plano:</h4>
-        <p>fulano@cicrano.com.br</p>
-        <div>
-          {plans?.map((plan) => (
-            <Plan
-              storeId={plan.storeId}
-              title={plan.title}
-              description={plan.description}
-              fullPrice={plan.fullPrice}
-              discountAmmount={plan.discountAmmount}
-              discountPercentage={plan.discountPercentage}
-              installments={plan.installments}
-            />
-          ))}
-        </div>
-        <AboutContainer>
-          <About>Sobre a cobrança</About>
-          <QuestionCircle size={20} />
-        </AboutContainer>
-      </PlansDiv>
+        <PlansDiv>
+          <h4>Confira seu Plano:</h4>
+          <p>fulano@cicrano.com.br</p>
+          <div>
+            {plans?.map(plan => (
+              <Plan
+                key={plan.id}
+                formatToCurrency={formatToCurrency}
+                discountedPrice={discountedPrice}
+                splittedPrice={splittedPrice}
+                storeId={plan.storeId}
+                title={plan.title}
+                description={plan.description}
+                fullPrice={plan.fullPrice}
+                discountAmmount={plan.discountAmmount}
+                discountPercentage={plan.discountPercentage}
+                installments={plan.installments}
+                splittable={plan.splittable}
+                isChecked={isChecked}
+                onChange={()=> handleChange(plan.splittable)}
+              />
+            ))}
+          </div>
+          <AboutContainer>
+            <About>Sobre a cobrança</About>
+            <QuestionCircle size={20} />
+          </AboutContainer>
+        </PlansDiv>
       </Content>
     </Container>
-  );
-};
+  )
+}
 
-export default Checkout;
+export default Checkout
