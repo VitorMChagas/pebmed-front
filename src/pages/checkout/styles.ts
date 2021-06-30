@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   margin-top: 70px;
-  margin-left: 17rem;
+  margin-left: 10rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
