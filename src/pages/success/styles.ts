@@ -19,6 +19,13 @@ export const Container = styled.div`
     text-align: center;
     color: ${(props) => props.theme.colors.grayText};
   }
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap; 
+  }
 `;
 
 export const CheckMark = styled(IoCheckmark)`
@@ -34,7 +41,8 @@ export const InfoBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 25rem;
+  width: 24rem;
+  height: 14rem;
   margin-top: 5%;
 
   border-radius: 15px;
@@ -72,7 +80,9 @@ export const Star = styled(TiStarOutline)`
 
 export const PlanBox = styled.div`
   font-size: 1rem;
+  font-weight: 600;
 
+  color: ${(props) => props.theme.colors.primary};
   text-align: end;
 `;
 
@@ -86,7 +96,7 @@ export const UserBox = styled.div`
     justify-content: space-between;
 
     margin-top: 20px;
-    font-weight: 500;
+    font-weight: bold;
 
     font-size: 1rem;
 
