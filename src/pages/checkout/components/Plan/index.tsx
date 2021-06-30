@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 
 import { 
   Container, 
@@ -26,6 +26,11 @@ interface PlanProps {
   installments?: number; //12,
   acceptsCoupon?: boolean; //true
   finalPrice?: number;
+  isChecked?: boolean;
+  onChange?: () => void;
+  formatToCurrency?: (amount: number) => void;
+  discountedPrice: (fullPrice: number, discountAmmount: number) => number,
+  splittedPrice: (installments: number, discountedPrice: number) => number,
 }
 
 const Plan: React.FC<PlanProps> = ({
@@ -37,27 +42,19 @@ const Plan: React.FC<PlanProps> = ({
   discountPercentage,
   installments,
   finalPrice,
+  isChecked,
+  onChange,
+  splittable,
+  formatToCurrency,
+  discountedPrice,
+  splittedPrice,
   ...rest
 }) => {
 
-  const [discountPrice, setDiscountPrice] = useState(
+  const [discountPrice, setDiscountPrice] = useState<number>(
     discountedPrice(fullPrice, discountAmmount)
-    )
-
-  function formatToCurrency(amount: number) {
-    return "R$" + amount.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
-  }
+  )
   
-  function discountedPrice(fullPrice: number, discountAmmount: number) {
-    var finalPrice = fullPrice - discountAmmount;
-    return finalPrice;
-  }
-  
-  function splittedPrice(installments: number) {
-      var finalSplittedPrice = discountPrice / installments;
-      return finalSplittedPrice;
-  }
-
   return (
     <Container {...rest}>
       <Title>{`${title} | ${description} `} </Title>
@@ -72,13 +69,13 @@ const Plan: React.FC<PlanProps> = ({
           </Price>
           <Discount>{`-${Math.round(discountPercentage * 100)}%`}</Discount>
         </div>
-        <input type="radio" />
+        <input type="radio" checked={isChecked === splittable} onChange={onChange} />
       </Group>
         { 
           installments === 1 ? (
             <p> {''} </p>
           ) : (
-            <p>{`${installments}x`} de {`${formatToCurrency(splittedPrice(installments))}`}/mes</p>
+            <p>{`${installments}x`} de {`${formatToCurrency(splittedPrice(installments, discountPrice))}`}/mes</p>
           )
         }
     </Container>
