@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "typeRoots": [
+      "node_modules/@types",
+    ],
     "target": "es5",
     "lib": [
       "dom",
@@ -21,9 +24,10 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",   
+    "src/pages/success/index.tsx"  
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }
