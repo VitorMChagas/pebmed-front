@@ -9,28 +9,35 @@
   </a>
 </p>
 
-> Desafio Frontend PEBMED - Desenvolver o frontend de um sistema de checkout onde um usuário poderá fazer uma assinatura anual ou mensal apresentando sucesso ou erro ao submeter o formulário, enviando as informações de pagamento para processamento pelo backend.
+### Desafio Frontend PEBMED
+> Desenvolver o frontend de um sistema de checkout onde um usuário poderá fazer uma assinatura anual ou mensal apresentando sucesso ou erro ao submeter o formulário, enviando as informações de pagamento para processamento pelo backend.
 
 ### 🏠 [Homepage](https://github.com/VitorMChagas/pebmed-front#readme)
 
 ### ✨ [Demo](https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout)
-
+https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout(https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout)
 ## Install
 
 ```sh
 npm install
+# or
+yarn install
 ```
 
 ## Usage
 
 ```sh
 npm run dev
+# or
+yarn dev
 ```
 
 ## Run tests
 
 ```sh
 npm run test
+# or
+yarn test
 ```
 
 ## Author
@@ -38,7 +45,7 @@ npm run test
 👤 **Vitor Miguel das Chagas**
 
 * Github: [@VitorMChagas](https://github.com/VitorMChagas)
-* LinkedIn: [@https://www.linkedin.com/in/vitormchagas/](https://www.linkedin.com/in/vitormchagas/)
+* LinkedIn: [@vitormchagas](https://www.linkedin.com/in/vitormchagas/)
 
 ## 🤝 Contributing
 
