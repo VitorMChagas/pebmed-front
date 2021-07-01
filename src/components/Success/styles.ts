@@ -21,10 +21,14 @@ export const Container = styled.div`
   }
 
   @media only screen and (max-width: 768px) {
+    width: fit-content;
+
     display: flex;
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+
+    margin-left: 10px;
   }
 `;
 
@@ -82,7 +86,7 @@ export const PlanBox = styled.div`
   font-size: 1rem;
   font-weight: 600;
 
-  color: ${props => props.theme.colors.primary};
+  color: #242350;
   text-align: end;
 `;
 

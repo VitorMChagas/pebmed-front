@@ -18,7 +18,7 @@ interface SubscriptionProps {
   creditCardCPF?: string;
 }
 
-const Success: React.FC = ({}) => {
+const Success: React.FC = () => {
   const router = useRouter();
   const [cpfData, setCpfData] = useState(router.query.cpf);
   console.log(cpfData);
@@ -49,7 +49,7 @@ const Success: React.FC = ({}) => {
           <Star size={50} />
           <PlanBox>
             Anual | Parcelado <br />
-            R$ 490,90 | 10x R$ 47,99
+            R$ 479,90 | 10x R$ 47,99
           </PlanBox>
         </CheckoutBox>
         <UserBox>
