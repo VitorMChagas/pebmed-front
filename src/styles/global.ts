@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   * {
@@ -7,27 +7,27 @@ export default createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font: 400 16px "DM sans", sans-serif;
-    
+
     *:focus {
       outline: none;
     }
   }
 
   body {
-    background: ${(props) => props.theme.colors.background};
-    color: ${(props) => props.theme.colors.text};
+    background: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.text};
   }
 
-  
+
   @media(max-width: 1080px){
         html {
-            font-size: 0.7rem; 
+            font-size: 0.7rem;
         }
     }
 
     @media(max-width: 720px){
         html {
-            font-size: 1rem; 
+            font-size: 1rem;
         }
   }
 

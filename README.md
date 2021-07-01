@@ -1,34 +1,59 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center">Welcome to pebmed-front 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/VitorMChagas/pebmed-front#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/VitorMChagas/pebmed-front/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+</p>
 
-## Getting Started
+### Desafio Frontend PEBMED
+> Desenvolver o frontend de um sistema de checkout onde um usuário poderá fazer uma assinatura anual ou mensal apresentando sucesso ou erro ao submeter o formulário, enviando as informações de pagamento para processamento pelo backend.
 
-First, run the development server:
+### 🏠 [Homepage](https://github.com/VitorMChagas/pebmed-front#readme)
 
-```bash
+### ✨ [Demo](https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout)
+https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout
+## Install
+
+```sh
+npm install
+# or
+yarn install
+```
+
+## Usage
+
+```sh
 npm run dev
 # or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Run tests
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```sh
+npm run test
+# or
+yarn test
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Author
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+👤 **Vitor Miguel das Chagas**
 
-## Learn More
+* Github: [@VitorMChagas](https://github.com/VitorMChagas)
+* LinkedIn: [@vitormchagas](https://www.linkedin.com/in/vitormchagas/)
 
-To learn more about Next.js, take a look at the following resources:
+## 🤝 Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/VitorMChagas/pebmed-front/issues). You can also take a look at the [contributing guide](https://github.com/VitorMChagas/pebmed-front/blob/master/CONTRIBUTING.md).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Show your support
 
-## Deploy on Vercel
+Give a ⭐️ if this project helped you!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_

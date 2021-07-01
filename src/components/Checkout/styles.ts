@@ -1,7 +1,6 @@
-import styled from "styled-components";
-import AppPlan from "./components/Plan";
-
-import { AiOutlineQuestionCircle } from "react-icons/ai";
+import styled from 'styled-components';
+import { AiOutlineQuestionCircle } from 'react-icons/ai';
+import AppPlan from '../Plan';
 
 export const Container = styled.div`
   width: 100vw;
@@ -13,7 +12,7 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   margin-top: 70px;
-  margin-left: 17rem;
+  margin-left: 10rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 50px;
@@ -24,15 +23,15 @@ export const Content = styled.div`
     margin-left: 0;
     display: flex;
     align-items: center;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 
-      div:nth-child(1) { 
-        order: 2; 
-      }
+    div:nth-child(1) {
+      order: 2;
+    }
 
-      div:nth-child(2) { 
-        order: 1;
-      }
+    div:nth-child(2) {
+      order: 1;
+    }
   }
 `;
 
@@ -104,6 +103,6 @@ export const About = styled.span`
 
 export const QuestionCircle = styled(AiOutlineQuestionCircle)`
   &:hover {
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.secondary};
   }
 `;

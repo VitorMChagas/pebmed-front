@@ -7,8 +7,9 @@ const theme = {
     gray: '#F4F3F6',
     grayDetail: '#E1DEE8',
     grayText: '#C9C5D4',
-    formText: '#DDD9E5'
-  }
-}
+    formText: '#DDD9E5',
+  },
+};
+export default theme;
 
-export default theme
+export type MyTheme = typeof theme;

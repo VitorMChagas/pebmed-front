@@ -1,8 +1,8 @@
-import { ThemeProvider } from "styled-components";
-import Header from "../components/Header";
+import { ThemeProvider } from 'styled-components';
+import Header from '../components/Header';
 
-import GlobalStyle from "../styles/global";
-import theme from "../styles/theme";
+import GlobalStyle from '../styles/global';
+import theme from '../styles/theme';
 
 function MyApp({ Component, pageProps }) {
   return (

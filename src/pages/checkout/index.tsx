@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 import {
   Container,
@@ -8,45 +8,45 @@ import {
   FormDiv,
   AboutContainer,
   About,
-  QuestionCircle
-} from './styles'
+  QuestionCircle,
+} from '../../components/Checkout/styles';
 
-import FormData from './components/Form/index'
-import { OfferService } from '../../services/offer'
+import FormData from '../../components/Form/index';
+import { OfferService } from '../../services/offer';
 
 const Checkout: React.FC = () => {
-  const [plans, setPlans] = useState([])
-  const [isChecked, setIsChecked] = useState(false)
+  const [plans, setPlans] = useState([]);
+  const [isChecked, setIsChecked] = useState(false);
 
   function formatToCurrency(amount: number) {
-    return "R$" + amount.toLocaleString("pt-BR", { minimumFractionDigits: 2 });
+    return `R$${amount.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
   }
-  
+
   function discountedPrice(fullPrice: number, discountAmmount: number) {
-    var finalPrice = fullPrice - discountAmmount;
+    const finalPrice = fullPrice - discountAmmount;
 
     return finalPrice;
   }
-  
+
   function splittedPrice(installments: number, discountedPrice: number) {
-      var finalSplittedPrice = discountedPrice / installments;
-      
-      return finalSplittedPrice;
+    const finalSplittedPrice = discountedPrice / installments;
+
+    return finalSplittedPrice;
   }
-  
+
   useEffect(() => {
     async function requestData() {
-      const response = await OfferService.list()
-      console.log(response.data)
-      setPlans(response.data)
+      const response = await OfferService.list();
+      console.log(response.data);
+      setPlans(response.data);
     }
 
-    requestData()
-  }, [])
+    requestData();
+  }, []);
 
- function handleChange(value:boolean): void{  
-   setIsChecked(value)
- }
+  function handleChange(value: boolean): void {
+    setIsChecked(value);
+  }
 
   return (
     <Container>
@@ -83,7 +83,7 @@ const Checkout: React.FC = () => {
                 installments={plan.installments}
                 splittable={plan.splittable}
                 isChecked={isChecked}
-                onChange={()=> handleChange(plan.splittable)}
+                onChange={() => handleChange(plan.splittable)}
               />
             ))}
           </div>
@@ -94,7 +94,7 @@ const Checkout: React.FC = () => {
         </PlansDiv>
       </Content>
     </Container>
-  )
-}
+  );
+};
 
-export default Checkout
+export default Checkout;
