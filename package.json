@@ -1,6 +1,6 @@
 {
   "name": "pebmed-front",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Desafio Frontend PEBMED - Desenvolver o frontend de um sistema de checkout onde um usuário poderá fazer uma assinatura anual ou mensal apresentando sucesso ou erro ao submeter o formulário, enviando as informações de pagamento para processamento pelo backend.",
   "author": "Vitor Miguel das Chagas",
   "homepage": "https://github.com/VitorMChagas/pebmed-front#readme",
@@ -43,6 +43,7 @@
     "@testing-library/dom": "^8.0.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
+    "@testing-library/user-event": "^13.1.9",
     "@types/jest": "^26.0.23",
     "@types/node": "^15.12.4",
     "@types/react": "^17.0.11",
