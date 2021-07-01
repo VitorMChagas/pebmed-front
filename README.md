@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to pebmed-front 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.5.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/VitorMChagas/pebmed-front#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -14,8 +14,8 @@
 
 ### 🏠 [Homepage](https://github.com/VitorMChagas/pebmed-front#readme)
 
-### ✨ [Demo](https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout)
-https://pebmed-front-51t6cbmk9-vitormchagas.vercel.app/checkout
+### ✨ [Demo](https://pebmed-front-vitormchagas.vercel.app/checkout)
+https://pebmed-front-vitormchagas.vercel.app/checkout
 ## Install
 
 ```sh
