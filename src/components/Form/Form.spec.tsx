@@ -29,7 +29,13 @@ it('should type in form inputs and read valid inputs', async () => {
   const handleSubmit = jest.fn();
   const { getByRole } = render(
     <ThemeProvider theme={theme}>
-      <FormData isChecked installments={12} />
+      <FormData
+        splittedPrice
+        formatToCurrency
+        isChecked
+        installments={12}
+        discountPrice
+      />
       <MainButton onSubmit={handleSubmit} />
     </ThemeProvider>,
   );

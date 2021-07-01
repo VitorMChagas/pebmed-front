@@ -32,7 +32,13 @@ interface FormProps {
   };
 }
 
-export default function FormData({ isChecked, installments }) {
+export default function FormData({
+  isChecked,
+  splittedPrice,
+  installments,
+  formatToCurrency,
+  discountPrice,
+}) {
   const formRef = useRef<FormHandles>(null);
   const router = useRouter();
 
