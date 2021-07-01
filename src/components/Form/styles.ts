@@ -25,6 +25,13 @@ export const Container = styled.div`
     width: 40%;
     margin-left: 6.5rem;
   }
+
+  @media only screen and (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    padding-top: 40px;
+  }
 `;
 
 export const Group = styled.div`
@@ -39,8 +46,10 @@ export const Form = styled(Unform)`
     grid-gap: 40px;
     flex-direction: row;
     flex-wrap: nowrap;
+    color: #878199;
 
     > label {
+      color: #666173;
       font-size: 1rem;
     }
   }
@@ -59,10 +68,14 @@ export const Form = styled(Unform)`
     border: none;
     border-bottom: 2px solid #e7e7e7;
     margin-bottom: 20px;
-    color: ${props => props.theme.colors.formText};
+    color: ${props => props.theme.colors.grayText};
 
     ::placeholder {
-      color: ${props => props.theme.colors.formText};
+      color: ${props => props.theme.colors.grayText};
+    }
+
+    :focus {
+      color: #666173;
     }
   }
 
@@ -75,7 +88,7 @@ export const Form = styled(Unform)`
     border: none;
     border-bottom: 2px solid #e7e7e7;
     margin-bottom: 20px;
-    color: ${props => props.theme.colors.formText};
+    color: ${props => props.theme.colors.grayText};
   }
 `;
 
@@ -97,7 +110,7 @@ export const Select = styled.select`
   border: none;
   border-bottom: 2px solid #e7e7e7;
   margin-bottom: 20px;
-  color: ${props => props.theme.colors.formText};
+  color: ${props => props.theme.colors.grayText};
 `;
 
 export const MainButton = styled.button`

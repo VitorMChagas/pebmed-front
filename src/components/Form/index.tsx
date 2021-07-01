@@ -32,13 +32,7 @@ interface FormProps {
   };
 }
 
-export default function FormData({
-  isChecked,
-  splittedPrice,
-  installments,
-  formatToCurrency,
-  discountPrice,
-}) {
+export default function FormData({ isChecked, installments }) {
   const formRef = useRef<FormHandles>(null);
   const router = useRouter();
 
@@ -149,12 +143,7 @@ export default function FormData({
               <option value="">Selecionar</option>
               <option value="installments">1</option>
               {isChecked && (
-                <option value="">
-                  {`${installments}x`} de{' '}
-                  {`${formatToCurrency(
-                    splittedPrice(installments, discountPrice),
-                  )}`}
-                </option>
+                <option value="">{`${installments}x`} de R$45,00/mes</option>
               )}
             </Select>
           </label>
