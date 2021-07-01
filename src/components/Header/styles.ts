@@ -14,6 +14,11 @@ export const Container = styled.div`
   > img {
     width: 55px;
     height: 35px;
+
+    @media only screen and (max-width: 768px) {
+      margin-left: 60px;
+      flex-direction: row;
+    }
   }
 `;
 
